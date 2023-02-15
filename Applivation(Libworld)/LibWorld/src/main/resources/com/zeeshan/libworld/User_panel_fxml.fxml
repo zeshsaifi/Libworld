@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainPanel" prefHeight="600.0" prefWidth="1000.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zeeshan.libworld.UserController">
+   <children>
+      <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="496.0" fitWidth="938.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@images/background.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <Pane prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="105.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/background.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="usernameLabel" layoutX="105.0" layoutY="14.0" text="Username" textFill="#00b8f1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane layoutX="12.0" layoutY="110.0" minHeight="50.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20px;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="120.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button id="LIbutton" fx:id="currentStatusButton" minWidth="300.0" mnemonicParsing="false" onAction="#currentStatusTable" text="Current Status" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button id="LIbutton" fx:id="bookAvailabilityButton" minWidth="300.0" mnemonicParsing="false" onAction="#bookAvailabilityTable" text="Book Availability" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button id="LIbutton" fx:id="historyButton" minWidth="300.0" mnemonicParsing="false" onAction="#historyTable" text="History" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+      <TableView id="table" fx:id="currentStatusTable" disable="true" fixedCellSize="0.0" prefHeight="420.0" prefWidth="980.0" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="180.0">
+         <columns>
+            <TableColumn id="tableColumns" fx:id="cu" prefWidth="122.5" text="Username" />
+            <TableColumn id="tableColumns" fx:id="cbi" prefWidth="122.5" text="Book ID" />
+            <TableColumn id="tableColumns" fx:id="cbn" prefWidth="122.5" text="Book Name" />
+            <TableColumn id="tableColumns" fx:id="cdta" prefWidth="122.5" text="Date of Adept" />
+            <TableColumn id="tableColumns" fx:id="cdts" prefWidth="122.5" text="Date of Submit" />
+         </columns>
+         <padding>
+            <Insets bottom="18.0" top="18.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <GridPane id="table" fx:id="bookAvailabilityPanel" disable="true" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="180.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField id="field" fx:id="bookIDField" alignment="CENTER" promptText="Book ID" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField id="field" fx:id="bookNameField" alignment="CENTER" promptText="Book Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button id="LIbutton" mnemonicParsing="false" onAction="#searchByID" text="Search" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button id="LIbutton" mnemonicParsing="false" onAction="#searchByName" text="Search" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label text="Book ID :" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="Book Name :" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="Quantity :" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="Availability :" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="bookIDLabel" alignment="CENTER" contentDisplay="CENTER" prefWidth="300.0" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="bookQuantityLabel" alignment="CENTER" contentDisplay="CENTER" prefWidth="300.0" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="bookAvailabilityLabel" alignment="CENTER" contentDisplay="CENTER" prefWidth="300.0" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="bookNameLabel" alignment="CENTER" contentDisplay="CENTER" prefWidth="300.0" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <TableView id="table" fx:id="historyTable" disable="true" layoutX="10.0" layoutY="160.0" prefHeight="420.0" prefWidth="980.0" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="180.0">
+         <columns>
+            <TableColumn id="tableColumns" fx:id="hu" minWidth="53.600006103515625" prefWidth="122.5" text="Username" />
+            <TableColumn id="tableColumns" fx:id="hbi" minWidth="81.59994506835938" prefWidth="122.5" text="Book ID" />
+            <TableColumn id="tableColumns" fx:id="hbn" minWidth="122.5" prefWidth="122.5" text="Book Name" />
+            <TableColumn id="tableColumns" fx:id="hdta" minWidth="122.5" prefWidth="122.5" text="Date of Adept" />
+            <TableColumn id="tableColumns" fx:id="hdts" minWidth="122.5" prefWidth="122.5" text="Date of Submit" />
+         </columns>
+         <padding>
+            <Insets bottom="18.0" top="18.0" />
+         </padding>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy></TableView>
+      <Label text="Date and Time of Log In :" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="10.0" />
+      <Label fx:id="dateTimeLogin" layoutX="10.0" layoutY="10.0" text="0000/00/00 00:00:00" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0" />
+      <Button id="DHAbutton" fx:id="signOutButton" layoutX="911.0" layoutY="61.0" mnemonicParsing="false" onAction="#signOut" text="Sign Out" textFill="RED" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

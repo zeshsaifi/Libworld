@@ -1,0 +1,13 @@
+Website : https://www.freesqldatabase.com/login
+Username : rewote9575@jobsfeel.com
+Password : I_am_temp
+
+Your account number is: 744368
+Your new database is now ready to use.
+To connect to your database use these details;
+
+Host: sql12.freesqldatabase.com
+Database name: sql12597962
+Database user: sql12597962
+Database password: EFDeTPRCIq
+Port number: 3306
